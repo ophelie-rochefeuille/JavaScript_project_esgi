@@ -1,0 +1,13 @@
+@import url('./assets/fonts/fonts.css');
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("base.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: poppins-light;
+}

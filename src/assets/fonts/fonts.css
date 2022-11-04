@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "poppins-black";
+    src: url("./Poppins-Black.woff2") format("woff2"),
+    url("./Poppins-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("./Poppins-Bold.woff2") format("woff2"),
+    url("./Poppins-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-extra-bold";
+    src: url("./Poppins-ExtraBold.woff2") format("woff2"),
+    url("./Poppins-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-extra-light";
+    src: url("./Poppins-ExtraLight.woff2") format("woff2"),
+    url("./Poppins-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-light";
+    src: url("./Poppins-Light.woff2") format("woff2"),
+    url("./Poppins-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-medium";
+    src: url("./Poppins-Medium.woff2") format("woff2"),
+    url("./Poppins-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-semi-bold";
+    src: url("./Poppins-SemiBold.woff2") format("woff2"),
+    url("./Poppins-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "poppins-thin";
+    src: url("./Poppins-Thin.woff2") format("woff2"),
+    url("./Poppins-Thin.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: "poppins-regular";
+    src: url("./Poppins-Regular.woff2") format("woff2"),
+    url("./Poppins-Regular.woff") format("woff");
+}
+

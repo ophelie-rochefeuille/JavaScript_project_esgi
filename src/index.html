@@ -10,18 +10,20 @@
     <title>Javascript project ESGI</title>
 </head>
 <body>
-    <script src="header.js">header()</script>
+
     <div class="main-container">
         <header>
             <div id="navbar">
                 <a id="dateheure" >d/m/y</a>
-                <a id="battery">batterie</a>
+                <div class="main">
+                    <h1 id="level" class="animated fadeIn">Battery level: 00%</h1>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 0%">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <nav>
-                <a href="#">Calculatrice</a>
-                <a href="#">Tic Tac Toe</a>
-                <a href="#">Horloge</a>
-            </nav>
+
         </header>
         <div class="body-main-page">
             <h1>Fonctionnalités</h1>
@@ -29,6 +31,6 @@
         <footer>
             <span>Libre de droits ESGI creation</span>
         </footer>
-    </div>
+    </div>    <script src="header.js">header()</script>
 </body>
 </html>

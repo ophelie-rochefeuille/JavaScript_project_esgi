@@ -1,35 +1,24 @@
-/* Style the navbar */
-#navbar {
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.6);
-    height: 30px;
+.navbar{
+    justify-content: space-between;
+    padding: 0.5rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
 
-  }
-  
-  /* Navbar links */
-  #navbar a {
-    float: right;
-    display: block;
-    color: #141313;
-    text-align: center;
-    padding: 8px;
-    text-decoration: none;
-  }
-  
-  /* Page content */
-  .content {
-    padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
+.main-battery{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
 
+.battery-svg{
+    padding-right: 0.5rem ;
+}
+.hours-div{
+    width: 30%;
+    font-size: 14px;
+}

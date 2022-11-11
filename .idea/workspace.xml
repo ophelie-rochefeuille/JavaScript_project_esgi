@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e780001d-2799-474f-ad44-8bc02e65804e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,21 +33,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/ophelie/project/ESGI/JAVASCRIPT/JavaScript_project_esgi/Javascript_project_esgi/src/assets/fonts",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/ophelie/project/ESGI/JAVASCRIPT/JavaScript_project_esgi/Javascript_project_esgi/src/imagesAndSvg/battery&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg\battery" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg\battery" />
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg" />
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\images - svg" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\public" />
     </key>
@@ -55,6 +66,8 @@
       <updated>1667574193361</updated>
       <workItem from="1667574194548" duration="2709000" />
       <workItem from="1667577006192" duration="1522000" />
+      <workItem from="1668068422286" duration="6404000" />
+      <workItem from="1668159919311" duration="2561000" />
     </task>
     <servers />
   </component>

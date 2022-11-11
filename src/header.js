@@ -1,6 +1,4 @@
-console.log('header');
-
-function pause(ms) 
+function pause(ms)
 {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -23,128 +21,41 @@ async function afficherDate()
 }
 afficherDate();
 
-/*var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
-console.log(battery);
+// functions battery
 
-function updateBatteryStatus() {
-    battery = battery.level * 100 + " %";
-    battery.addEventListener("levelchange", updateBatteryStatus);   
-}
+const svgBattery = document.querySelector('.battery-svg');
 
-updateBatteryStatus();
+
 
 navigator.getBattery().then(function(battery) {
-    function updateAllBatteryInfo(){
-      updateChargeInfo();
-      updateLevelInfo();
-      updateChargingInfo();
-      updateDischargingInfo();
-    }
-    updateAllBatteryInfo();
-  
-    battery.addEventListener('chargingchange', function(){
-      updateChargeInfo();
-    });
-    function updateChargeInfo(){
-      console.log("Battery charging? "
-                  + (battery.charging ? "Yes" : "No"));
-    }
-  
-    battery.addEventListener('levelchange', function(){
-      updateLevelInfo();
-    });
-    function updateLevelInfo(){
-      batterie = battery.level * 100 
-      console.log(battery.level * 100 + "%");
-      document.getElementById('battery').innerHTML = parseInt(batterie, 10) + "%";
-    }
-  
-    battery.addEventListener('chargingtimechange', function(){
-      updateChargingInfo();
-    });
-    function updateChargingInfo(){
-      console.log("Battery charging time: "
-                   + battery.chargingTime + " seconds");
-    }
-  
-    battery.addEventListener('dischargingtimechange', function(){
-      updateDischargingInfo();
-    });
-    function updateDischargingInfo(){
-      console.log("Battery discharging time: "
-                   + battery.dischargingTime + " seconds");
-    }
-  
-  }); */
-navigator.getBattery().then(function(battery) {
+    // retrieve battery's level and display this level in menu bar
     let one = document.querySelector('.progress-bar')
-    one.style.width = battery.level * 100 + '%';
-    //$('.progress-bar').css('width', battery.level * 100 + '%');
-    document.getElementById('level').innerHTML =  `Battery level: ${(battery.level * 100).toFixed()} %`;
-    //$('#level').html('Battery level: ' + (battery.level * 100).toFixed() + '%')
+    document.getElementById('level').innerHTML =  ` ${(battery.level * 100).toFixed()} %`;
 
+
+    function calculBatterySvg() {
+        if(battery.level > 0.98) {
+            console.log(battery.level)
+            return "imagesAndSvg/battery/full-battery.svg"
+        } else if (battery.level >= 0.50 ) {
+            console.log(battery.level)
+            return "imagesAndSvg/battery/medium-battery.svg"
+        } else if ( battery.level >= 0.20) {
+            console.log(battery.level)
+            return "imagesAndSvg/battery/low-battery.svg"
+        } else if (battery.level < 0.20){
+            console.log(battery.level)
+            return "imagesAndSvg/battery/empty-battery.svg"
+
+        }
+    }
+
+    // function for autocharge the battery's level in template
     battery.onlevelchange = function() {
-        document.getElementById('level').innerHTML = `Battery level: ${(battery.level * 100).toFixed()} %`;
-        //$('#level').html('Battery level: ' + (this.level * 100).toFixed() + '%')
+        document.getElementById('level').innerHTML = ` ${(battery.level * 100).toFixed()} %`;
         document.querySelector('.progress-bar').style.width = battery.level * 100 + '%';
+        svgBattery.src = calculBatterySvg();
     };
 });
 
-/*let batteryCharge  = document.getElementById('battery');
-batteryCharge.value = `${navigator.getBattery()
-    .then(function(battery) {
-        battery.level * 100;
-    })} %`;
-navigator.getBattery()
-    .then(function(battery) {
-        console.log(battery.level * 100);
-    });
-
-
-let battery;
-navigator.getBattery().then((battery) => {
-    function updateAllBatteryInfo() {
-        updateChargeInfo();
-        updateLevelInfo();
-        updateChargingInfo();
-        updateDischargingInfo();
-    }
-    updateAllBatteryInfo();
-
-    battery.addEventListener("chargingchange", () => {
-        updateChargeInfo();
-    });
-    function updateChargeInfo() {
-        console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
-    }
-
-    battery.addEventListener("levelchange", () => {
-        updateLevelInfo();
-    });
-    function updateLevelInfo() {
-         let batteryCharge = document.getElementById('battery');
-         let tab = [];
-
-         let pourcent = battery.level * 100;
-         if(batteryCharge != ''){
-             batteryCharge.removeAttribute();
-             batteryCharge.append(pourcent);
-         }
-        console.log(`Battery level: ${battery.level * 100}%`);
-    }
-
-    battery.addEventListener("chargingtimechange", () => {
-        updateChargingInfo();
-    });
-    function updateChargingInfo() {
-        console.log(`Battery charging time: ${battery.chargingTime} seconds`);
-    }
-
-    battery.addEventListener("dischargingtimechange", () => {
-        updateDischargingInfo();
-    });
-    function updateDischargingInfo() {
-        console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
-    }
-});*/

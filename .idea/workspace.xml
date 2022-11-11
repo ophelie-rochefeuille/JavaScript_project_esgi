@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e780001d-2799-474f-ad44-8bc02e65804e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/png/baseMobile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagesAndSvg/base.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/png/base.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagesAndSvg/battery/empty-battery.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/battery/empty-battery.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagesAndSvg/battery/full-battery.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/battery/full-battery.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagesAndSvg/battery/low-battery.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/battery/low-battery.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imagesAndSvg/battery/medium-battery.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/battery/medium-battery.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
@@ -33,27 +38,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/ophelie/project/ESGI/JAVASCRIPT/JavaScript_project_esgi/Javascript_project_esgi/src/imagesAndSvg/battery&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/ophelie/project/ESGI/JAVASCRIPT/JavaScript_project_esgi/Javascript_project_esgi/src/imagesAndSvg/battery",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg\battery" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\components\header" />
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\images\png" />
+      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\images" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg\battery" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg" />
-      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\images - svg" />
-      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src" />
-      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,7 +73,7 @@
       <workItem from="1667574194548" duration="2709000" />
       <workItem from="1667577006192" duration="1522000" />
       <workItem from="1668068422286" duration="6404000" />
-      <workItem from="1668159919311" duration="2561000" />
+      <workItem from="1668159919311" duration="4568000" />
     </task>
     <servers />
   </component>

@@ -27,7 +27,6 @@ afficherDate();
 const svgBattery = document.querySelector('.battery-svg');
 
 
-
 navigator.getBattery().then(function(battery) {
     // retrieve battery's level and display this level in menu bar
     let one = document.querySelector('.progress-bar')
@@ -37,16 +36,16 @@ navigator.getBattery().then(function(battery) {
     function calculBatterySvg() {
         if(battery.level > 0.98) {
             console.log(battery.level)
-            return "imagesAndSvg/battery/full-battery.svg"
+            return "../../assets/images/battery/full-battery.svg"
         } else if (battery.level >= 0.50 ) {
             console.log(battery.level)
-            return "imagesAndSvg/battery/medium-battery.svg"
+            return "../../assets/images/battery/medium-battery.svg"
         } else if ( battery.level >= 0.20) {
             console.log(battery.level)
-            return "imagesAndSvg/battery/low-battery.svg"
+            return "../../assets/images/battery/low-battery.svg"
         } else if (battery.level < 0.20){
             console.log(battery.level)
-            return "imagesAndSvg/battery/empty-battery.svg"
+            return "../../assets/images/battery/empty-battery.svg"
 
         }
     }

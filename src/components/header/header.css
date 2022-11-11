@@ -1,4 +1,7 @@
-.navbar{
+@import url('../../assets/fonts/fonts.css');
+
+.navbar-header{
+    font-family: poppins-light;
     justify-content: space-between;
     padding: 0.5rem;
     display: flex;
@@ -6,6 +9,10 @@
     color: white;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
 .main-battery{
     display: flex;
     justify-content: end;

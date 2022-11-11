@@ -13,3 +13,10 @@
         - "npm i live-server" 
         - "npm start"
 - Open your web navigation and enter your localhost address (here is 127.0.0.1:8080) 
+
+
+
+
+
+# credentials images 
+Stockio

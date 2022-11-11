@@ -6,10 +6,13 @@ html{
     box-sizing: border-box;
 }
 body{
-    background-image: url("./assets/images/png/base.jpg");
+    background-image: url("assets/images/png/base.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: poppins-light;
+    margin: 0;
+    padding: 0;
+
 }
 .navbar{
     width: 100%;

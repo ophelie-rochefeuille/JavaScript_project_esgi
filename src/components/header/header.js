@@ -19,7 +19,6 @@ async function afficherDate()
     document.getElementById('dateheure').innerHTML = dateheure;
   }
 }
-
 afficherDate();
 
 

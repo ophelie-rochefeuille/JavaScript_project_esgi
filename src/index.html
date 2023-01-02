@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Javascript project ESGI</title>
 </head>
-<body>
+<body data-theme="laptop">
 
 <header>
     <!-- Import fichier HTML -> Menu bar -->
     <object type="text/html" data="./components/header/header.html" class="navbar"></object><br/>
+    <!-- <object type="text/html" data="./components/darkMode/darkMode.html" class="navbar"></object><br/> -->
+    <button onclick="switchDarkMode()">Cerise sur le gateau</button>
+    <button onclick="mobileCheck()">Mobile</button>
 </header>
 
 <div class="main-container">
@@ -32,3 +35,6 @@
 
 </body>
 </html>
+<script src="./index.js">mobileCheck()</script>
+
+<script  src="./components/darkMode/darkMode.js"> switchDarkMode()</script>

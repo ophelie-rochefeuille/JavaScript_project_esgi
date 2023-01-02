@@ -7,18 +7,19 @@ function pause(ms)
 
 async function afficherDate() 
 {
-  while(true) 
-  {
+  //while(true) 
+  //{
     await pause(1000);
     var cejour = new Date();
     var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
 	var date = cejour.toLocaleDateString("fr-FR", options);
 	var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
-	var dateheure = date + " " + heure;
-    var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+	var dh = date + " " + heure;
+    var dateheure = dh.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
     document.getElementById('dateheure').innerHTML = dateheure;
-  }
+  //}
 }
+
 afficherDate();
 
 
@@ -29,7 +30,7 @@ const svgBattery = document.querySelector('.battery-svg');
 
 navigator.getBattery().then(function(battery) {
     // retrieve battery's level and display this level in menu bar
-    let one = document.querySelector('.progress-bar')
+    //let one = document.querySelector('.progress-bar')
     document.getElementById('level').innerHTML =  ` ${(battery.level * 100).toFixed()} %`;
 
 

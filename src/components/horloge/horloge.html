@@ -1,34 +1,59 @@
-<!-- Import CSS -->
-<link rel="stylesheet" href="./horloge.css" />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Javascript project ESGI</title>
+    </head>
+    <body>
 
-<div class="setters">
-    <div class="minutes-set">
-      <button data-setter="minutes-plus">+</button>
-      <button data-setter="minutes-minus">-</button>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="./horloge.css" />
+
+
+    <div class="main-container">
+        
+        <div class="tab-content">
+            <div id="clock" class="tab-pane fade in active">
+                <object id="clockapp" type="text/html" data="./clock/clock.html"></object><br/>
+            </div>
+
+            <div id="timer" class="tab-pane fade">
+                <object id="timerapp" type="text/html" data="./timer/timer.html" hidden></object><br/>
+            </div>
+
+            <div id="chrono" class="tab-pane fade">
+                <object id="chronoapp" type="text/html" data="./chronometre/chronometre.html" hidden></object><br/>
+            </div>
+        </div>
+
+        <!-- fonctionnalités -->
+        <!-- minuterie -->
+        <div class="content" id="content">
+
+        </div>
+
+        <nav class="barreNavigation nav nav-tabs">
+            <a href="#clock" class="nav-item" data-active-color="green" data-toggle="tab" onclick="clickClock();">Horloge</a>
+            <a href="#timer" class="nav-item" data-active-color="blue" data-toggle="tab" onclick="clickTimer();">Minuterie</a>
+            <a href="#chrono" class="nav-item" data-active-color="red" data-toggle="tab" onclick="clickChronometre();">Chronomètre</a>
+            <span class="nav-indicator"></span>
+        </nav>
+
+        <!-- minuterie -->
+
+        <!--<ul>
+        <li><a class="active" href="" onclick="clockapp()">Horloge</a></li>
+        <li><a href="" onclick="timerapp()">Minuterie</a></li>
+        <li><a href="" onclick="chronocontent()">Chronomètre</a></li>
+        </ul>-->
+
     </div>
-    <div class="seconds-set">
-      <button data-setter="seconds-plus">+</button>
-      <button data-setter="seconds-minus">-</button>
-    </div>
-</div>
 
-<div class="circle">
-    <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(110,110)">
-            <circle r="100" class="e-c-base"/>
-            <g transform="rotate(-90)">
-                <circle r="100" class="e-c-progress"/>
-                <g id="e-pointer">
-                <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
-                </g>
-            </g>
-        </g>
-    </svg>
-</div>
-
-<div class="controlls">
-    <div class="display-remain-time">00:30</div>
-    <button class="play" id="pause"></button>
-</div>
+    </body>
+</html>
 
 <script src="./horloge.js"></script>

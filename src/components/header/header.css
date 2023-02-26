@@ -1,0 +1,31 @@
+@import url('../../assets/fonts/fonts.css');
+
+.navbar-header{
+    font-family: poppins-light;
+    justify-content: space-between;
+    padding: 0.5rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-battery{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.battery-svg{
+    padding-right: 0.5rem ;
+}
+.hours-div{
+    width: 30%;
+    font-size: 14px;
+}

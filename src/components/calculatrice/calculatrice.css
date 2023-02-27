@@ -1,8 +1,18 @@
+@import url('../../assets/fonts/fonts.css');
+
+html{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: poppins-light;
+}
 .container {
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
 }
 
 .score {
@@ -37,4 +47,12 @@
 
 .controls {
     display: flex;
+}
+
+.input{
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: darkorange;
+    border-radius: 4px;
 }

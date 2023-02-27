@@ -22,6 +22,24 @@ async function afficherDate()
 
 afficherDate();
 
+// vibration
+
+let vibrational = false;
+const vibration = document.querySelector('.vibration');
+
+vibration.addEventListener('click', vibrateOn);
+vibration.src = '../../assets/images/svg/Mute.svg';
+function vibrateOn() {
+    console.log(vibrational)
+    vibrational = !vibrational
+    if (vibrational === true){
+        navigator.vibrate(1)
+        vibration.src = '../../assets/images/svg/Vibration.svg';
+    } else {
+        vibration.src = '../../assets/images/svg/Mute.svg';
+
+    }
+}
 
 // functions battery
 
@@ -58,8 +76,6 @@ navigator.getBattery().then(function(battery) {
     };
 });
 
-
-var ping = require('ping');
 
 var hosts = ['192.168.1.1', 'google.com', 'yahoo.com'];
 hosts.forEach(function(host){

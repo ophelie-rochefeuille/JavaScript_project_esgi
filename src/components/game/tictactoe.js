@@ -212,14 +212,16 @@ function resetGame() {
 // Toggle haptic feedback
 function toggleHaptic() {
     hapticEnabled = !hapticEnabled;
-    navigator.vibrate(5000);
+    if(hapticEnabled === true ){
+        playHapticFeedback()
+    }
     const haptic = hapticEnabled ? 'on' : 'off';
     hapticButton.textContent = `Haptic feedback: ${haptic}`;
 }
 
 // Play haptic feedback
 function playHapticFeedback() {
-    navigator.vibrate(100);
+    navigator.vibrate(1);
 }
 
 // Event listeners

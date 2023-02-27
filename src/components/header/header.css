@@ -32,7 +32,11 @@ body{
     padding: 0.5rem;
 }
 
-
+.vibration{
+    max-height: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
 @media screen and (max-width: 480px) {
     .navbar-header{
         width: 100%;

@@ -2,6 +2,10 @@
 
 html{
     background-color:#FFE6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .container {
     display: flex;

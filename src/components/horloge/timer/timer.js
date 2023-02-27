@@ -1,14 +1,14 @@
-// heure courante
-
-// heure courante
-
-// minuterie
-
 //circle start
 let progressBar = document.querySelector('.e-c-progress');
 let indicator = document.getElementById('e-indicator');
 let pointer = document.getElementById('e-pointer');
 let length = Math.PI * 2 * 100;
+
+const hapticButton = document.querySelector('#toggle-haptic');
+
+let hapticEnabled = false;
+
+hapticButton.addEventListener('click', toggleHaptic);
 
 progressBar.style.strokeDasharray = length;
 
@@ -21,6 +21,7 @@ function update(value, timePercent) {
 //circle ends
 const displayOutput = document.querySelector('.display-remain-time')
 const pauseBtn = document.getElementById('pause');
+const pauseReinit = document.getElementById('reinitialize');
 const setterBtns = document.querySelectorAll('button[data-setter]');
 let intervalTimer;
 let timeLeft;
@@ -42,6 +43,7 @@ function changeWholeTime(seconds){
 for (var i = 0; i < setterBtns.length; i++) {
     setterBtns[i].addEventListener("click", function(event) {
         var param = this.dataset.setter;
+        if (hapticEnabled) playHapticFeedback();
         switch (param) {
             case 'minutes-plus':
                 changeWholeTime(1 * 60);
@@ -60,6 +62,13 @@ for (var i = 0; i < setterBtns.length; i++) {
     });
 }
 
+function mySoNiceSound(s)
+{
+	var e=document.createElement('audio');
+	e.setAttribute('src',s);
+	e.play();
+}
+
 function timer (seconds){ //counts time, takes seconds
   let remainTime = Date.now() + (seconds * 1000);
   displayTimeLeft(seconds);
@@ -67,6 +76,7 @@ function timer (seconds){ //counts time, takes seconds
   intervalTimer = setInterval(function(){
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
     if(timeLeft < 0){
+      mySoNiceSound('./../../../assets/audio/alarm.mp3');
       clearInterval(intervalTimer);
       isStarted = false;
       setterBtns.forEach(function(btn){
@@ -83,6 +93,7 @@ function timer (seconds){ //counts time, takes seconds
 }
 
 function pauseTimer(event){
+  if (hapticEnabled) playHapticFeedback();
   if(isStarted === false){
     timer(wholeTime);
     isStarted = true;
@@ -116,8 +127,30 @@ function displayTimeLeft (timeLeft){ //displays time on the input
 
 pauseBtn.addEventListener('click',pauseTimer);
 
-//minuterie
+function reinitialize(){
+  if(hapticEnabled) playHapticFeedback();
+  clearInterval(intervalTimer);
+  isStarted = false;
+  setterBtns.forEach(function(btn){
+    btn.disabled = false;
+    btn.style.opacity = 1;
+  });
+  displayTimeLeft(wholeTime);
+  pauseBtn.classList.remove('pause');
+  pauseBtn.classList.add('play');
+  return ;
+}
 
-// chronomètre
+pauseReinit.addEventListener('click',reinitialize);
 
-// chronomètre
+// Toggle haptic feedback
+function toggleHaptic() {
+  hapticEnabled = !hapticEnabled;
+  const haptic = hapticEnabled ? 'on' : 'off';
+  hapticButton.textContent = `Haptic feedback: ${haptic}`;
+}
+
+// Play haptic feedback
+function playHapticFeedback() {
+  navigator.vibrate(100);
+}

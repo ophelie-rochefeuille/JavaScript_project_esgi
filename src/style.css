@@ -6,19 +6,29 @@ html{
     box-sizing: border-box;
 }
 body{
+<<<<<<< HEAD
+<<<<<<< HEAD
     background-image: url("assets/images/png/base.jpg");
     background-size: auto;
+=======
+    /* background-image: url("assets/images/png/base.jpg"); */
+=======
+    background-image: url("assets/images/png/base.jpg");
+>>>>>>> f80faf5 (correction push)
+    background-size: cover;
+>>>>>>> 0faca6b (tesst)
     background-repeat: no-repeat;
     font-family: poppins-light;
     margin: 0;
     padding: 0;
-
 }
 .navbar{
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 .main-container{
     display: flex;
     justify-content: center;
@@ -77,3 +87,55 @@ body{
     }
 
 }
+=======
+.dark{
+    /* background-image: url("assets/images/png/baseMobile.jpg"); */
+    transition: 350ms ease-in-out;
+    background-color: #222;
+    color: #e6e6e6;
+}
+
+
+
+
+
+
+[data-theme="light"] {
+    --gradient-one: #30cfd0;
+    --gradient-two: #330867;
+    --bg-color: #ffffff;
+    --links: #000000;
+    background-image: url("assets/images/png/base.jpg");
+
+  }
+
+  [data-theme="laptop"] {
+    --gradient-one: red;
+    --gradient-two: blue;
+    --bg-color: #ffffff;
+    --links: #000000;
+    background-image: url("assets/images/png/base.jpg");
+
+  }
+  
+  [data-theme="mobile"] {
+    --gradient-one: rgba(245, 107, 244, 0.79);
+    --gradient-two: #efad05;
+    --bg-color: #21232f;
+    --links: #FFFFFF;
+    background-image: url("assets/images/png/baseMobile.jpg");
+
+  }
+
+
+@media (prefers-color-scheme: dark) {
+    /* custom css */
+    body {
+
+        background-color: red;
+    }
+    }
+>>>>>>> 0faca6b (tesst)
+=======
+}
+>>>>>>> f80faf5 (correction push)

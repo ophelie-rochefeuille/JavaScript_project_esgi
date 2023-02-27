@@ -57,3 +57,6 @@ nav {
     width: auto;
     height: auto;
 }
+a > img {
+    width: 2.3em;
+}

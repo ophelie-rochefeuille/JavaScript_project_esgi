@@ -7,12 +7,10 @@ html{
 }
 body{
     background-image: url("assets/images/png/base.jpg");
-    background-size: auto;
     background-repeat: no-repeat;
     font-family: poppins-light;
     margin: 0;
     padding: 0;
-
 }
 .navbar{
     width: 100%;
@@ -51,7 +49,7 @@ body{
         margin: 0;
         padding: 0;
         height: 100vh;
-    }
+    }    
     body{
         background-image: url("assets/images/png/base.jpg");
         font-family: poppins-light;

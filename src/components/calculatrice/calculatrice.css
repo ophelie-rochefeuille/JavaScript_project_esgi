@@ -56,3 +56,64 @@ html{
     background-color: darkorange;
     border-radius: 4px;
 }
+
+@media screen and (max-width: 480px) {
+
+
+    html{
+        background-color: aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: poppins-light;
+    }
+    .container {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .score {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .input{
+        border: none;
+        width: 2rem;
+        height: 2rem;
+        background-color: darkorange;
+        border-radius: 4px;
+    }
+}

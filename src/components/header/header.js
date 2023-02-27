@@ -33,7 +33,7 @@ function vibrateOn() {
     console.log(vibrational)
     vibrational = !vibrational
     if (vibrational === true){
-        navigator.vibrate(100)
+        navigator.vibrate(1000)
         vibration.src = '../../assets/images/svg/Vibration.svg';
     } else {
         vibration.src = '../../assets/images/svg/Mute.svg';

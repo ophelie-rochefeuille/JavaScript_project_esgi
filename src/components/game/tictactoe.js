@@ -221,7 +221,7 @@ function toggleHaptic() {
 
 // Play haptic feedback
 function playHapticFeedback() {
-    navigator.vibrate(1);
+    navigator.vibrate(1000);
 }
 
 // Event listeners

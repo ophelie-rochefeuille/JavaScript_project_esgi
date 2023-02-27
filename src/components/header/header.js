@@ -10,15 +10,16 @@ async function afficherDate()
   while(true) 
   {
     await pause(1000);
-    var cejour = new Date();
-    var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
-	var date = cejour.toLocaleDateString("fr-FR", options);
-	var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
-	var dateheure = date + " " + heure;
-    var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+    let cejour = new Date();
+    let options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+	let date = cejour.toLocaleDateString("fr-FR", options);
+	let heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+	let dateheure = date + " " + heure;
+    dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
     document.getElementById('dateheure').innerHTML = dateheure;
   }
 }
+
 afficherDate();
 
 
@@ -31,7 +32,7 @@ navigator.getBattery().then(function(battery) {
     // retrieve battery's level and display this level in menu bar
     let one = document.querySelector('.progress-bar')
     document.getElementById('level').innerHTML =  ` ${(battery.level * 100).toFixed()} %`;
-
+    svgBattery.src = calculBatterySvg();
 
     function calculBatterySvg() {
         if(battery.level > 0.98) {
@@ -46,7 +47,6 @@ navigator.getBattery().then(function(battery) {
         } else if (battery.level < 0.20){
             console.log(battery.level)
             return "../../assets/images/battery/empty-battery.svg"
-
         }
     }
 
@@ -58,3 +58,13 @@ navigator.getBattery().then(function(battery) {
     };
 });
 
+
+var ping = require('ping');
+
+var hosts = ['192.168.1.1', 'google.com', 'yahoo.com'];
+hosts.forEach(function(host){
+    ping.sys.probe(host, function(isAlive){
+        var msg = isAlive ? 'host ' + host + ' is alive' : 'host ' + host + ' is dead';
+        console.log(msg);
+    });
+});

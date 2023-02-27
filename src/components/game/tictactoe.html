@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+<div class="container">
+    <h1>Tic Tac Toe</h1>
+    <div class="score">
+        <span>Wins: </span><span id="wins">0</span>
+        <span>Losses: </span><span id="losses">0</span>
+        <span>Ties: </span><span id="ties">0</span>
+    </div>
+    <div class="board">
+        <div class="row">
+            <div class="cell" data-row="0" data-col="0"></div>
+            <div class="cell" data-row="0" data-col="1"></div>
+            <div class="cell" data-row="0" data-col="2"></div>
+        </div>
+        <div class="row">
+            <div class="cell" data-row="1" data-col="0"></div>
+            <div class="cell" data-row="1" data-col="1"></div>
+            <div class="cell" data-row="1" data-col="2"></div>
+        </div>
+        <div class="row">
+            <div class="cell" data-row="2" data-col="0"></div>
+            <div class="cell" data-row="2" data-col="1"></div>
+            <div class="cell" data-row="2" data-col="2"></div>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="reset">Reset</button>
+        <button id="toggle-haptic">Haptic feedback: off</button>
+    </div>
+</div>
+<script src="tictactoe.js"></script>
+</body>
+</html>

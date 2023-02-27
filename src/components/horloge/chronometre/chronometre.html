@@ -1,0 +1,21 @@
+<!-- Import CSS -->
+<link rel="stylesheet" href="./chronometre.css" />
+
+    <div id="time"></div>
+
+
+	<form name="parametre" action="" method="">
+        <input type="button" name="lance"  value="Démarrer" onclick="chrono();debut();">
+        <input type="button" name="pause"  value="Stop" onclick="arret();" disabled="disabled">
+        <input type="button" name="zero"  value="Effacer" onclick="arret();raz();" disabled="disabled">
+        <input type="button" name="intermediaire"  value="Intermediaire" onclick="inter();" disabled="disabled">
+        <input type="button" name="rappel"  value="Rappel" onclick="rappeler();" disabled="disabled">
+    </form>
+
+
+	<div id="presenter">
+        <p>Temps intermediaire : </p>
+        <span id="interm"></span>
+    </div>
+
+    <script src="./chronometre.js"></script>

@@ -12,7 +12,7 @@ let playerOScore = 0;
 let hapticEnabled = false;
 let playerXScoreDisplay;
 let playerOScoreDisplay;
-let wins = 0;
+let wins = 1;
 let losses = 0;
 let ties = 0;
 
@@ -147,18 +147,13 @@ function checkTie() {
 
 // Handle a win by the current player
 function handleWin() {
-    // Increase the score of the current player
     if (currentPlayer === 'X') {
         playerXScore++;
     } else {
         playerOScore++;
     }
-
-    // Display the winner and the scores
     displayWinner();
     displayScores();
-
-    // Disable the board
     disableBoard();
 }
 
@@ -167,19 +162,19 @@ function handleTie() {
     // Display the tie message and the scores
     displayTie();
     displayScores();
-
-    // Disable the board
     disableBoard();
 }
 
 // Display the winner and the scores
 function displayWinner() {
-    message.textContent = `${currentPlayer} wins!`;
+    winsDisplay.textContent = ` ${playerXScore} parties gagnée(s) pour ${currentPlayer} !`;
+    lossesDisplay.textContent = ` ${playerOScore} parties gagnée(s) pour l'ordinateur !`;
+    resetGame();
 }
 
 // Display the tie message and the scores
 function displayTie() {
-    message.textContent = 'It\'s a tie!';
+    lossesDisplay.textContent = 'It\'s a tie!';
 }
 
 // Display the scores
@@ -206,17 +201,9 @@ function resetGame() {
         cells[i].textContent = '';
         cells[i].classList.remove('X', 'O');
     }
-
-    // Reset the current player
     currentPlayer = 'X';
-
-    // Enable the board
     enableBoard();
-
-    // Clear the message
     message.textContent = '';
-
-    // Clear the haptic feedback
     if (hapticEnabled) {
         navigator.vibrate(0);
     }

@@ -11,5 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "ping": "^0.4.2",
+    "ping.js": "^0.3.0",
+    "web-pingjs": "^1.0.1"
   }
 }

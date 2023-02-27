@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e780001d-2799-474f-ad44-8bc02e65804e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +40,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "//wsl$/Ubuntu/home/ophelie/project/ESGI/JAVASCRIPT/JavaScript_project_esgi/Javascript_project_esgi/src/imagesAndSvg/battery",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -48,11 +54,11 @@
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\ophelie\ESGI\JavaScript_project_esgi\src\assets\images\png" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\components\header" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\images\png" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\assets\images" />
       <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg\battery" />
-      <recent name="\\wsl$\Ubuntu\home\ophelie\project\ESGI\JAVASCRIPT\JavaScript_project_esgi\Javascript_project_esgi\src\imagesAndSvg" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,6 +73,7 @@
       <workItem from="1667577006192" duration="1522000" />
       <workItem from="1668068422286" duration="6404000" />
       <workItem from="1668159919311" duration="4957000" />
+      <workItem from="1677503597256" duration="2429000" />
     </task>
     <servers />
   </component>

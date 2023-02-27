@@ -3,14 +3,25 @@
 <h2>latence reseau</h2>
 <!-- Affichage heure -->
 <h2>Format Horaire</h2>
+<input type="checkbox" id="heure">
+<input type="checkbox" id="minutes">
+<input type="checkbox" id="secondes">
 <!-- Configurer date -->
 <h2>Format Date</h2>
+<input type="checkbox" id="date">
+<input type="checkbox" id="annee">
+<input type="checkbox" id="mois">
+<input type="checkbox" id="jour">
 <!-- Configurer vibration -->
 <h2>Vibration</h2>
 <!-- Niveau de Batterie -->
 <h2>Batterie</h2>
+<input type="checkbox" id="batterie">
 <!-- Configurer latence reseau -->
 <h2>Latence reseau </h2>
+<input type="checkbox" id="affichageLatence">
+<input type="number" min="0" max="60" value="0" id="delaisLatence">
+<input type="text" id="domainePing">
 <!-- Enregistrer parametre json -->
 <h2>Enregistrement parametre</h2>
 <a id ='btnJson'> Save JSON</a>
@@ -19,6 +30,8 @@
 </div>
 <!-- Methode verouillage appareil -->
 <h2>Verrouillage appareil</h2>
+<input type="text" id="verrouillage">
+
 <!-- Dark mode -->
 <h2>Dark mode</h2>
 <label for="theme-selector">Choix de thème :</label>
@@ -27,5 +40,10 @@
   <option value="dark">Sombre</option>
   <option value="green">Green</option>
 </select>
+<!-- Reset Storage -->
+<h2>Reset</h2>
+<input type="checkbox" id="reset">
+<a id ='btnSaveAll'> Save All</a>
+
 <script src="parametre.js"></script>
 

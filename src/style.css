@@ -5,7 +5,7 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body{   
     background-image: url("assets/images/png/base.jpg");
     background-repeat: no-repeat;
     font-family: poppins-light;

@@ -21,3 +21,15 @@ input[type="button"] {
     background-color: rgba(46, 89, 188, 0.25);
     cursor: pointer;
 }
+
+.interm2 {
+    list-style: none;
+}
+
+.toggle-haptic{
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgba(188, 110, 46, 0.25);
+    cursor: pointer;
+}

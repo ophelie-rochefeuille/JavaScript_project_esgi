@@ -9,13 +9,16 @@
         <input type="button" name="pause"  value="Stop" onclick="arret();" disabled="disabled">
         <input type="button" name="zero"  value="Effacer" onclick="arret();raz();" disabled="disabled">
         <input type="button" name="intermediaire"  value="Intermediaire" onclick="inter();" disabled="disabled">
-        <input type="button" name="rappel"  value="Rappel" onclick="rappeler();" disabled="disabled">
+        <!--<input type="button" name="rappel"  value="Rappel" onclick="rappeler();" disabled="disabled">-->
     </form>
+
+    <button id="toggle-haptic">Haptic feedback: off</button>
 
 
 	<div id="presenter">
         <p>Temps intermediaire : </p>
-        <span id="interm"></span>
+        <!--<span id="interm"></span>-->
+        <ul id="interm2"></ul>
     </div>
 
     <script src="./chronometre.js"></script>

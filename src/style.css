@@ -72,4 +72,8 @@ body{
         font-size: 10px;
     }
 
+    .toolbar{
+        width: 60%;
+    }
+
 }

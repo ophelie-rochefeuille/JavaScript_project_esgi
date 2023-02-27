@@ -7,7 +7,8 @@
     <list default="true" id="e780001d-2799-474f-ad44-8bc02e65804e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/game/tictactoe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/tictactoe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/tictactoe.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/tictactoe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/tictactoe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/tictactoe.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1667577006192" duration="1522000" />
       <workItem from="1668068422286" duration="6404000" />
       <workItem from="1668159919311" duration="4957000" />
-      <workItem from="1677503597256" duration="3600000" />
+      <workItem from="1677503597256" duration="4524000" />
     </task>
     <servers />
   </component>

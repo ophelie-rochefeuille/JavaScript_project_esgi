@@ -35,15 +35,146 @@ function init() {
         this.parametrage = getLocalStorage();
     }
 }
-// Récupère l'objet du stockage local
-// let parametragetest = getLocalStorage();
-// Enregistre l'objet modifié dans le stockage local
-// localStorage.setItem('parametrages', JSON.stringify(setLocalStorage(parametragetest, "eteint")));// JSON.stringify(parametragetest));
+//                                                      Switch Save All 
+let saveAllSelector = document.getElementById('btnSaveAll');
+saveAllSelector.addEventListener('click', function() {
+  console.log("save");
+  latenceReseauValid();
+  formatHoraire();
+  formatDate();
+  etatBatterie();
+  verrouillage();
+})
+//Latence reseau
+function latenceReseauValid(){
+  if(delais_latence() != null && domaine_latence()){
+    let latenceParameter = getLocalStorage();
+    latenceParameter.latence_Reseau.affichage_latence = latence_reseau();
+    latenceParameter.latence_Reseau.delaisRafraichissement = delais_latence();
+    latenceParameter.latence_Reseau.domainePing = domaine_latence()
+    localStorage.setItem('parametrages', JSON.stringify(latenceParameter)); 
+  }
+}
+//Horaire
+function formatHoraire(){
+    let horaireParameter = getLocalStorage();
+    horaireParameter.formatHoraire.affichage_heure = horaire_heure();
+    horaireParameter.formatHoraire.affichage_minute = horaire_minute();
+    horaireParameter.formatHoraire.affichage_seconde = horaire_seconde();
+    localStorage.setItem('parametrages', JSON.stringify(horaireParameter)); 
 
-//                                                      Latence Réseau
+}
+// Date 
+function formatDate(){
+  let dateParameter = getLocalStorage();
+  dateParameter.formatDate.affichage_date = date_affichage();
+  dateParameter.formatDate.affichage_annee = date_annee();
+  dateParameter.formatDate.affichage_mois = date_mois();
+  dateParameter.formatDate.affichage_jour = date_jour();
+  localStorage.setItem('parametrages', JSON.stringify(dateParameter)); 
+}
+// Batterie
+function etatBatterie(){
+  let parameter = getLocalStorage();
+  let batterieelector = document.getElementById('batterie');
+  parameter.etatBatterie = batterieelector.checked;
+  localStorage.setItem('parametrages', JSON.stringify(parameter)); 
+}
+
+//                                                      Switch Batterie (FIN)
+
+//                                                      Switch reset
+let resetSelector = document.getElementById('reset');
+resetSelector.addEventListener('click', function() {
+  resetPSLocalStorage();
+})
+//                                                      Switch reset (FIN)
+// Latence Reseau
+function latence_reseau() {
+let latenceSelector = document.getElementById('affichageLatence');
+  return latenceSelector.checked;
+}
+function delais_latence(){
+  let delaisLatenceSelector = document.getElementById('delaisLatence');
+  return delaisLatenceSelector.value;
+}
+function domaine_latence(){
+  let domainePingSelector = document.getElementById('domainePing');
+  return domainePingSelector.value;
+}
+// Horaire
+function horaire_heure(){
+  let horaireHSelector = document.getElementById('heure');
+  return horaireHSelector.checked;
+}
+function horaire_minute(){
+  let horaireMSelector = document.getElementById('minutes');
+  return horaireMSelector.checked;
+}
+function horaire_seconde(){
+  let horaireSSelector = document.getElementById('secondes');
+  return horaireSSelector.checked;
+}
+//Date
+function date_affichage() {
+  let dateDSelector = document.getElementById('date');
+  return dateDSelector.checked;
+}
+function date_annee() {
+  let dateASelector = document.getElementById('annee');
+  return dateASelector.checked;
+}
+function date_mois() {
+  let dateMSelector = document.getElementById('mois');
+  return dateMSelector.checked;
+}
+function date_jour() {
+  let dateJSelector = document.getElementById('jour');
+  return dateJSelector.checked;
+}
+// Verrouillage
+function verrouillage(){
+  let parameter = getLocalStorage();
+  let verrouillageSelector = document.getElementById('verrouillage');
+  parameter.verrouillage = verrouillageSelector.value;
+  localStorage.setItem('parametrages', JSON.stringify(parameter)); 
+}
 
 
-//                                                      Latence Réseau (FIN)
+// Récupère le choix de thème enregistré
+let parametreTheme = getLocalStorage();
+// Applique le thème
+let themeSelector = document.getElementById('theme-selector');
+if (!!parametreTheme.theme) {
+  themeSelector.value = parametreTheme.theme;
+  applyTheme(parametreTheme.theme);
+} else {
+  parametreTheme.theme = "light"
+localStorage.setItem('parametrages', JSON.stringify(setLSTheme(this.parametrage, "light"))); // Applique le thème par défaut si aucun choix n'a été enregistré
+  applyTheme('light');
+}
+// Enregistre le choix de thème lorsqu'il est modifié
+themeSelector.addEventListener('change', function() {
+  let selectedTheme = themeSelector.value;
+  let parametrageTheme = getLocalStorage();
+  localStorage.setItem('parametrages', JSON.stringify(setLSTheme(parametrageTheme, selectedTheme)));
+  applyTheme(selectedTheme);
+});
+// Applique le thème sélectionné
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.style.backgroundColor = '#1E1E1E';
+    document.body.style.color = '#FFFFFF';
+  } else if (theme === 'light'){
+    document.body.style.backgroundColor = '#FFFFFF';
+    document.body.style.color = '#000000';
+  } else {
+    document.body.style.backgroundColor = '#008000';
+    document.body.style.color = '#000000';
+  }
+}
+//                                                      Switch Thème (FIN)
+
 
 
 //                                                      Enregistrement Parametre
@@ -66,56 +197,7 @@ addJsonSelector.addEventListener('change', handleFiles, false);
     }
   }
   }
-  addJsonSelector.type = 'file';
-  addJsonSelector.id = "addBtnJson";
-  addJsonSelector.addEventListener('change', function() {
-    const file = addJsonSelector.files[0];
-    const reader = new FileReader();
-  });
 //                                                      Enregistrement Parametre (FIN)
-
-
-//                                                      Switch Thème
-// Récupère le choix de thème enregistré
-let parametreTheme = getLocalStorage();
-// Applique le thème
-let themeSelector = document.getElementById('theme-selector');
-if (!!parametreTheme.theme) {
-  themeSelector.value = parametreTheme.theme;
-  applyTheme(parametreTheme.theme);
-} else {
-  parametreTheme.theme = "light"
-localStorage.setItem('parametrages', JSON.stringify(setLSTheme(this.parametrage, "light"))); // Applique le thème par défaut si aucun choix n'a été enregistré
-  applyTheme('light');
-}
-// Enregistre le choix de thème lorsqu'il est modifié
-themeSelector.addEventListener('change', function() {
-  let selectedTheme = themeSelector.value;
-  let parametrageTheme = getLocalStorage();
-  localStorage.setItem('parametrages', JSON.stringify(setLSTheme(parametrageTheme, selectedTheme)));
-  applyTheme(selectedTheme);
-});
-// localStorage.setItem('parametrages', JSON.stringify(setLSTheme(parametragetest, "light")));// JSON.stringify(parametragetest));
-// Applique le thème sélectionné
-function applyTheme(theme) {
-  if (theme === 'dark') {
-    document.body.style.backgroundColor = '#1E1E1E';
-    document.body.style.color = '#FFFFFF';
-  } else if (theme === 'light'){
-    document.body.style.backgroundColor = '#FFFFFF';
-    document.body.style.color = '#000000';
-  } else {
-    document.body.style.backgroundColor = '#008000';
-    document.body.style.color = '#000000';
-  }
-}
-//                                                      Switch Thème (FIN)
-
-
-function setLSVerrouillage(parametre, value){
-  parametre.verrouillage = value;
-  return parametre;
-}
 
 function setLSTheme(parametre, value){
     parametre.theme = value;

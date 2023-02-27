@@ -212,6 +212,7 @@ function resetGame() {
 // Toggle haptic feedback
 function toggleHaptic() {
     hapticEnabled = !hapticEnabled;
+    navigator.vibrate(5000);
     const haptic = hapticEnabled ? 'on' : 'off';
     hapticButton.textContent = `Haptic feedback: ${haptic}`;
 }

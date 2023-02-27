@@ -15,14 +15,17 @@ body{
 .main-battery{
     display: flex;
     justify-content: end;
+    align-items: center;
     width: 50%;
     font-size: 14px;
     margin: 0;
-    padding: 0;
+    padding-right: 0.5rem;
+
 }
 
 .battery-svg{
     padding-right: 0.5rem ;
+    max-height: 1rem;
 }
 .hours-div{
     font-size: 14px;

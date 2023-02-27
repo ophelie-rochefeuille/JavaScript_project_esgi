@@ -40,13 +40,39 @@ function init() {
 // Enregistre l'objet modifié dans le stockage local
 // localStorage.setItem('parametrages', JSON.stringify(setLocalStorage(parametragetest, "eteint")));// JSON.stringify(parametragetest));
 
-
-console.log("JSON PARTY : ", JSON.stringify(this.parametrage));
 //                                                      Latence Réseau
 
 
 //                                                      Latence Réseau (FIN)
 
+
+//                                                      Enregistrement Parametre
+let saveJsonSelector = document.getElementById('btnJson');
+saveJsonSelector.addEventListener('click', function() {
+  savejson();
+})
+
+let addJsonSelector = document.getElementById('addBtnJson');
+addJsonSelector.addEventListener('change', handleFiles, false);
+  function handleFiles(){
+    if(!!this.files[0]) {
+    let typeContent = this.files[0].name;
+    if(typeContent.endsWith(".json")) {
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        saveParams(reader.result);
+      });
+      reader.readAsText(this.files[0]);
+    }
+  }
+  }
+  addJsonSelector.type = 'file';
+  addJsonSelector.id = "addBtnJson";
+  addJsonSelector.addEventListener('change', function() {
+    const file = addJsonSelector.files[0];
+    const reader = new FileReader();
+  });
+//                                                      Enregistrement Parametre (FIN)
 
 
 //                                                      Switch Thème
@@ -108,4 +134,15 @@ function isLocalStorage(){
 
 function resetPSLocalStorage() {
     localStorage.removeItem("parametrages")
+}
+
+function savejson(){
+  var uri = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(getLocalStorage()));
+  var downloadLink = document.getElementById("btnJson");
+  downloadLink.setAttribute("href", uri);
+  downloadLink.setAttribute("download", "jsParameter.json");
+}
+
+function saveParams(params){
+  localStorage.setItem('parametrages', params);
 }

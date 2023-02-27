@@ -12,3 +12,8 @@ function clearScreen() {
     var q = eval(p);
     document.getElementById("result").value = q;
     }
+
+    //resultat intermediaire
+    //supprimer resultat intermediaire
+    //positif/negatif
+    // retour haptique

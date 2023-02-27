@@ -77,6 +77,7 @@ function timer (seconds){ //counts time, takes seconds
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
     if(timeLeft < 0){
       mySoNiceSound('./../../../assets/audio/alarm.mp3');
+      notifyMe();
       clearInterval(intervalTimer);
       isStarted = false;
       setterBtns.forEach(function(btn){
@@ -153,4 +154,30 @@ function toggleHaptic() {
 // Play haptic feedback
 function playHapticFeedback() {
   navigator.vibrate(100);
+}
+
+function notifyMe() {
+  // Vérifions si le navigateur prend en charge les notifications
+  if (!('Notification' in window)) {
+    alert('Ce navigateur ne prend pas en charge la notification de bureau')
+  }
+
+  // Vérifions si les autorisations de notification ont déjà été accordées
+  else if (Notification.permission === 'granted') {
+    // Si tout va bien, créons une notification
+    const notification = new Notification('La minuterie est écoulée')
+  }
+
+  // Sinon, nous devons demander la permission à l'utilisateur
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then((permission) => {
+      // Si l'utilisateur accepte, créons une notification
+      if (permission === 'granted') {
+        const notification = new Notification('La minuterie est écoulée')
+      }
+    })
+  }
+
+  // Enfin, si l'utilisateur a refusé les notifications, et que vous
+  // voulez être respectueux, il n'est plus nécessaire de les déranger.
 }

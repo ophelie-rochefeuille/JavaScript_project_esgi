@@ -95,5 +95,34 @@ button[data-setter]:hover { opacity: 0.5; }
     stroke: black;
     stroke-width: 2px;
 }
+
+.reinitialize{
+    background-color: black; /* Green */
+    border-radius: 20rem;
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size: 16px;*/
+}
+
+.toggle-haptic{
+    margin-left: 25%;
+    background-color: black; /* Green */
+    border-radius: 20rem;
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size: 16px;*/
+}
+
+.reinitialize:hover { opacity: 0.8; }
+
+.toggle-haptic:hover { opacity: 0.8; }
   
 #e-pointer { transition: transform 0.7s; }

@@ -4,7 +4,7 @@ function openHorloge()
     height = screen.height/2 ;
     top = (screen.width/2)-(width/2);
     left = (screen.height/4)-(height/4);
-    window.open('/components/horloge/horloge.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
+    window.open('./components/horloge/horloge.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
 }
 
 function openTicTacToe()
@@ -13,7 +13,7 @@ function openTicTacToe()
     height = screen.height/2 ;
     top = (screen.width/2)-(width/2);
     left = (screen.height/4)-(height/4);
-    window.open('/components/game/tictactoe.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
+    window.open('./components/game/tictactoe.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
 }
 
 function openCalculatrice()
@@ -22,5 +22,5 @@ function openCalculatrice()
     height = screen.height/2 ;
     top = (screen.width/2)-(width/2);
     left = (screen.height/4)-(height/4);
-    window.open('/components/calculatrice/calculatrice.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
+    window.open('./components/calculatrice/calculatrice.html', 'test', 'width='+width+', height='+height+', top='+top+', left='+left+'');
 }

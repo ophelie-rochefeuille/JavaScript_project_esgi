@@ -7,6 +7,7 @@
     <list default="true" id="e780001d-2799-474f-ad44-8bc02e65804e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calculatrice/calculatrice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calculatrice/calculatrice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/game/tictactoe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/tictactoe.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

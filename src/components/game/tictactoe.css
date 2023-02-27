@@ -73,3 +73,80 @@ button:hover{
     color: white;
 
 }
+
+@media screen and (max-width: 480px) {
+
+    html{
+        background-color:#FFE6E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        font-family: poppins-light;
+        color: #FF9B00;
+
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-bottom: 20px;
+    }
+
+    .board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border: 2px solid #FF9B00;
+        border-radius: 10px;
+        color: #FF9B00;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .cell {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #FF9B00;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    button{
+        cursor: pointer;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        border: 2px solid #FF9B00;
+        font-family: poppins-medium;
+        color: #FF9B00;
+        background: none;
+        border-radius: 6px;
+
+    }
+
+    button:hover{
+        transition: all 0.5s;
+        border: 2px solid #FF9B00;
+        background-color: #FF9B00;
+        color: white;
+
+    }
+}

@@ -38,7 +38,6 @@ function init() {
 //                                                      Switch Save All 
 let saveAllSelector = document.getElementById('btnSaveAll');
 saveAllSelector.addEventListener('click', function() {
-  console.log("save");
   latenceReseauValid();
   formatHoraire();
   formatDate();

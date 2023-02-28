@@ -7,53 +7,13 @@
 </head>
 <body>
 <h1> Parametres</h1>
-<!-- Afficher masquer latence reseau -->
-<h2>latence reseau</h2>
-<!-- Affichage heure -->
-<h2>Format Horaire</h2>
-<input type="checkbox" id="heure">
-<input type="checkbox" id="minutes">
-<input type="checkbox" id="secondes">
-<!-- Configurer date -->
-<h2>Format Date</h2>
-<input type="checkbox" id="date">
-<input type="checkbox" id="annee">
-<input type="checkbox" id="mois">
-<input type="checkbox" id="jour">
-<!-- Configurer vibration -->
-<h2>Vibration</h2>
-<!-- Niveau de Batterie -->
-<h2>Batterie</h2>
-<input type="checkbox" id="batterie">
-<!-- Configurer latence reseau -->
-<h2>Latence reseau </h2>
-<input type="checkbox" id="affichageLatence">
-<input type="number" min="0" max="60" value="0" id="delaisLatence">
-<input type="text" id="domainePing">
 <!-- Enregistrer parametre json -->
 <h2>Enregistrement parametre</h2>
-<a id ='btnJson'> Save JSON</a>
+<!-- <a id ='btnJson'> Save JSON</a>
 <div id="fichierInput">
   <input type="file" id="addBtnJson" accept="application/JSON">
-</div>
-<!-- Methode verouillage appareil -->
-<h2>Verrouillage appareil</h2>
-<input type="text" id="verrouillage">
+</div> -->
 
-<!-- Dark mode -->
-<h2>Dark mode</h2>
-<label for="theme-selector">Choix de thème :</label>
-<select id="theme-selector">
-  <option value="light">Clair</option>
-  <option value="dark">Sombre</option>
-  <option value="green">Green</option>
-</select>
-<!-- Reset Storage -->
-<h2>Reset</h2>
-<input type="checkbox" id="reset">
-<a id ='btnSaveAll'> Save All</a>
-
-<script src="parametre.js"></script>
 
 <div class="main-div-settings">
 
@@ -66,10 +26,13 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="affichageLatence">
         <span class="slider round"></span>
       </label>
     </div>
+
+<input type="number" min="0" max="60" value="0" id="delaisLatence">
+<input type="text" id="domainePing">
 
   </div>
   <!-- Affichage heure -->
@@ -79,7 +42,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver l'heure</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="heure">
         <span class="slider round"></span>
       </label>
     </div>
@@ -87,7 +50,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver les minutes</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="minutes">
         <span class="slider round"></span>
       </label>
     </div>
@@ -95,7 +58,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver les secondes</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="secondes">
         <span class="slider round"></span>
       </label>
     </div>
@@ -108,7 +71,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver la date</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="date">
         <span class="slider round"></span>
       </label>
     </div>
@@ -116,7 +79,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver l'année</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="annee">
         <span class="slider round"></span>
       </label>
     </div>
@@ -124,7 +87,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver le mois</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="mois">
         <span class="slider round"></span>
       </label>
     </div>
@@ -132,7 +95,7 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver le jour</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="jour">
         <span class="slider round"></span>
       </label>
     </div>
@@ -167,18 +130,22 @@
     <div class="div-contain-settings">
       <span>Afficher/désactiver la batterie</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="batterie">
         <span class="slider round"></span>
       </label>
     </div>
 
   </div>
-  <!-- Configurer latence reseau -->
-  <h3>Latence reseau </h3>
   <!-- Enregistrer parametre json -->
   <h3>Enregistrement parametre</h3>
+  <a id ='btnJson'> Save JSON</a>
+  <div id="fichierInput">
+    <input type="file" id="addBtnJson" accept="application/JSON">
+  </div>
   <!-- Methode verouillage appareil -->
   <h3>Verrouillage appareil</h3>
+<input type="text" id="verrouillage">
+
   <!-- Dark mode -->
   <h3>Dark mode</h3>
   <label for="theme-selector">Choix de thème :</label>
@@ -187,6 +154,10 @@
     <option value="dark">Sombre</option>
     <option value="green">Green</option>
   </select>
+  <h3>Batterie</h3>
+  <input type="checkbox" id="reset">
+  <a id ='btnSaveAll'> Save All</a>
+  
 </div>
 
 <script src="parametre.js"></script>

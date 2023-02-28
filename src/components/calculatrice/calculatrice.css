@@ -58,8 +58,21 @@ html{
     border: none;
     width: 3rem;
     height: 3rem;
-    background-color: darkorange;
+    background-color: #ffcc8e;
     border-radius: 4px;
+}
+.number {
+    background-color: #ff8c00;
+
+}
+
+.input:hover {
+    background-color: #b36300;
+}
+
+.input:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 480px) {

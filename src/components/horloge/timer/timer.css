@@ -108,7 +108,7 @@ button[data-setter]:hover { opacity: 0.5; }
     /*font-size: 16px;*/
 }
 
-.toggle-haptic{
+#toggle-haptic{
     margin-left: 25%;
     background-color: black; /* Green */
     border-radius: 20rem;
@@ -123,6 +123,6 @@ button[data-setter]:hover { opacity: 0.5; }
 
 .reinitialize:hover { opacity: 0.8; }
 
-.toggle-haptic:hover { opacity: 0.8; }
+#toggle-haptic:hover { opacity: 0.8; }
   
 #e-pointer { transition: transform 0.7s; }
